@@ -18,23 +18,28 @@ def main():
     time.sleep(1)
     print("'Someone at the door, worthy of the gift of Death, but do they lack courage to accept it?'")
     time.sleep(4)
-    escape_choice = input("You are suddenly afraid, but do you choose to run?")
+    escape_choice = input("You are suddenly afraid, but do you choose to run?\n")
     if escape_choice == "yes":
         time.sleep(4)
         print("You ran as fast as your crumbling legs could take you. You did not choose to accept the gift that the mysterious figure spoke of...")
         time.sleep(2)
-        print("In the world beyond, blackened ichor filled a crumbling sky, as what was left of your sould withered to nothing...")
+        print("In the world beyond, blackened ichor filled a crumbling sky, as the remnants of your sould withered to nothing...")
         time.sleep(5)
         sys.exit()
     if escape_choice == "no":
         time.sleep(4)
         print("You decide to push your fear back inside of you. You then wish to question the mysterious figure...")
         time.sleep(3)
-        for question in figure_questions:
-            print(str(question))
-        time.sleep(2)
-        figure_asking = input("What question do you ask this mysterious figure?")
+        first_questions()
         
+        
+def first_questions(figure_questions):
+    print("Questions:")
+    time.sleep(2)
+    for question in figure_questions:
+            print(str(question))
+    time.sleep(2)
+    asking_figure = input("What question do you ask this mysterious figure?:\n")
 
 
 

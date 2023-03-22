@@ -40,6 +40,14 @@ def first_questions(figure_questions):
             print(str(question))
     time.sleep(2)
     asking_figure = input("What question do you ask this mysterious figure?:\n")
+    if asking_figure == "Where am I?":
+         time.sleep(5)
+         print("The msyteriosu figure speaks: 'Even I do not know or understand...'")
+         time.sleep(1)
+         print("'All I ever knew and will know of this dark place is misery, and how it is known as The Sunless Lands. Mortal, you are no longer on the plane on which you lived your life.'")
+    else:
+         return
+    if asking_figure == "Who are you?":
 
 
 

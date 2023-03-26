@@ -48,6 +48,13 @@ def first_questions(figure_questions):
     else:
          return
     if asking_figure == "Who are you?":
+         time.sleep(5)
+         print("The mysterious figure speaks: 'I am merely a guardian, a gate-watcher of the realm beyond'")
+         time.sleep(1)
+         print("'Few who come here get past me, but all they will know beyond this point is suffering'")
+         time.sleep(3)
+    else:
+         return
 
 
 

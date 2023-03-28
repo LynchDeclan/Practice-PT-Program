@@ -28,19 +28,22 @@ def main():
         sys.exit()
     if escape_choice == "no":
         time.sleep(4)
-        print("You decide to push your fear back inside of you. You then wish to question the mysterious figure...")
+        name = str(input("You decide to push your fear back inside of you. The mysterious figure suddenly speaks again: 'What is your name, mortal?'"))
         time.sleep(2)
-        first_questions(figure_questions)
+        print("You tell the mysteriosu figure a name you suddenly remembered, in that moment, as your own:", str(name), "but it doesn't really feel like you remember...")
+        print("It feels to you as though your mind is being played on by another force, something foreign, twisting your thoughts and making you belive things that you know, deep inside, are true about you.,.")
+        time.sleep(2)
+        first_questions(figure_questions, name)
         
         
-def first_questions(figure_questions):
+def first_questions(figure_questions, name):
     print("Questions:")
     time.sleep(2)
     for question in figure_questions:
             time.sleep(1)
             print(str(question))
     time.sleep(2)
-    asking_figure = input("What question do you ask this mysterious figure?:\n")
+    asking_figure = input("What question do you ask this mysterious figure,", str(name), "?:\n")
 
     if asking_figure == "Where am I?":
          where_am_i()
@@ -61,6 +64,7 @@ def where_am_i():
      time.sleep(1)
      print("'All I ever knew and will know of this dark place is misery, and how it is known as The Sunless Lands. Mortal, you are no longer on the plane on which you lived your life.'")
      time.sleep(3)
+
 def who_are_you():
     time.sleep(5)
     print("The mysterious figure speaks: 'I am merely a guardian, a gate-watcher of the realm beyond'")

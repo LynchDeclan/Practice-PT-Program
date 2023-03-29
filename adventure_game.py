@@ -3,7 +3,7 @@ import sys
 
 def main():
     figure_questions = ["'Where am I?'", "'Who are you?'", "'What happened to me?'", "'What lies beyond this gate?'"]
-    time.sleep(5)
+    time.sleep(4)
     print("You awaken, not knowing where you are and having no memory of past events...")
     time.sleep(3)
     print("You observe a barren landscape, the horizon touching an infinitely darkened land...")
@@ -19,18 +19,18 @@ def main():
     print("'Someone at the door, worthy of the gift of Death, but do they lack the courage to accept it?'")
     time.sleep(4)
     escape_choice = input("You are suddenly afraid, but do you choose to run?\n")
-    if escape_choice == "yes":
+    if escape_choice[0] in ["Y" or "y"]:
         time.sleep(4)
         print("You ran as fast as your crumbling legs could take you. You did not choose to accept the gift that the mysterious figure spoke of...")
         time.sleep(2)
         print("In the world beyond, blackened ichor filled a crumbling sky, as the remnants of your sould withered to nothing...")
         time.sleep(5)
         sys.exit()
-    if escape_choice == "no":
+    if escape_choice[0] in ["N" or "n"]:
         time.sleep(4)
-        name = str(input("You decide to push your fear back inside of you. The mysterious figure suddenly speaks again: 'What is your name, mortal?'"))
+        name = str(input("You decide to push your fear back inside of you. The mysterious figure suddenly speaks again: 'What is your name, mortal?'\n"))
         time.sleep(2)
-        print("You tell the mysteriosu figure a name you suddenly remembered, in that moment, as your own:", str(name), "but it doesn't really feel like you remember...")
+        print("You tell the mysteriosu figure a name you suddenly remembered, in that moment, as your own: " +name+ " but it doesn't really feel like you remember...")
         print("It feels to you as though your mind is being played on by another force, something foreign, twisting your thoughts and making you belive things that you know, deep inside, are true about you.,.")
         time.sleep(2)
         first_questions(figure_questions, name)
@@ -43,7 +43,7 @@ def first_questions(figure_questions, name):
             time.sleep(1)
             print(str(question))
     time.sleep(2)
-    asking_figure = input("What question do you ask this mysterious figure,", str(name), "?:\n")
+    asking_figure = input("What question do you ask this mysterious figure, " +name+ "?:\n")
 
     if asking_figure == "Where am I?":
          where_am_i()
@@ -72,7 +72,7 @@ def who_are_you():
     print("'Few who come here get past me, but all they will know beyond this point is suffering'")
     time.sleep(3)
 
-def what_happened_to_me(figure_questions):
+def what_happened_to_me(figure_questions, asking_figure, question):
     time.sleep(5)
     print("The mysterious figure speaks: 'Dear mortal, even though you may not remember it now, you were a bringer of pain and suffering in your realm, with a cruel spirit and a wicked heart.'")
     time.sleep(1)
@@ -85,13 +85,22 @@ def what_happened_to_me(figure_questions):
     print("But you are shocked at the fact that you were once a very bad person...")
     time.sleep(2)
     print("The mysterious figure speaks: 'Well, mortal? Do you wish to proceed?'")
-    time.sleep(3)
+    time.sleep(2)
     print("Hesistant, you would like to ask this mysterious figure one more question: ")
-    for question in figure_questions:
-        time.sleep(1)
-        print(str(question))
+    print(str(question[0]))
+    print(str(question[1]))
+    print(str(question[3]))
     time.sleep(2) 
     input("What would you like to ask?: ")
+
+    if asking_figure == "Where am I?":
+         where_am_i()
+    
+    if asking_figure == "Who are you?":
+         who_are_you()
+
+    if asking_figure == "What lies beyond this gate?":
+        what_lies_beyond_gate()
 
 def what_lies_beyond_gate():
      time.sleep(5)

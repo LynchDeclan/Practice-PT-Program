@@ -143,6 +143,16 @@ def what_happened_to_me(figure_questions, asking_figure):
 
 def what_lies_beyond_gate():
      time.sleep(4)
+     print("The mysterious figure speaks: 'Dear mortal, this gate is what you have been comdemned to go through by her majesty, who was handed conmtrol over your sould as soon as you passed on from the mortal realm...'")
+     time.sleep(2)
+     print("'Beyond this gate, lies the realm of eternal damnation. I am sure you know what this is...'")
+     time.sleep(2)
+     print("You do, indeed, know what the mysterious figure is talking about... The voices in your head get louder and louder... You were a sinner in the mortal realm...")
+     time.sleep(2)
+     print("What lies beyonmd this gate, you know, is the realm of Hell.")
+     time.sleep(2)
+     print("The mysterious figure speaks one last time before you go through the gates: 'Mortal, take these souls of the iniquitous, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
+     time.sleep(2)
 
 
 

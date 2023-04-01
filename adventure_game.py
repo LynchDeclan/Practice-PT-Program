@@ -3,6 +3,7 @@ import sys
 
 def main():
     figure_questions = ["[Where am I?]", "[Who are you?]", "[What happened to me?]", "[What lies beyond this gate?]"]
+    demon_souls = []
     time.sleep(3)
     print("You awaken, not knowing where you are and having no memory of past events...")
     time.sleep(2)
@@ -33,10 +34,10 @@ def main():
         print("You tell the mysterious figure a name you suddenly remembered, in that moment, as your own: " +name+ " but it doesn't really feel like you remember...")
         print("It feels to you as though your mind is being played on by another force, something foreign, twisting your thoughts and making you belive things that you know, deep inside, are true about you.,.")
         time.sleep(2)
-        first_questions(figure_questions, name)
+        first_questions(figure_questions, name, demon_souls)
         
         
-def first_questions(figure_questions, name):
+def first_questions(figure_questions, name, demon_souls):
     print("Questions:")
     time.sleep(2)
     for question in figure_questions:
@@ -46,19 +47,19 @@ def first_questions(figure_questions, name):
     asking_figure = input("What question do you ask this mysterious figure, " +name+ "?:\n")
 
     if asking_figure == "Where am I?":
-         where_am_i()
+         where_am_i(demon_souls)
     
     if asking_figure == "Who are you?":
-         who_are_you()
+         who_are_you(demon_souls)
     
     if asking_figure == "What happened to me?":
         what_happened_to_me(figure_questions, asking_figure)
 
     if asking_figure == "What lies beyond this gate?":
-        what_lies_beyond_gate()
+        what_lies_beyond_gate(demon_souls)
      
     
-def where_am_i():
+def where_am_i(demon_souls):
      time.sleep(4)
      print("The msyteriosu figure speaks: 'Even I do not know or understand...'")
      time.sleep(1)
@@ -76,8 +77,18 @@ def where_am_i():
      time.sleep(1)
      print("The voices in your head tell you that there are different types of demon souls. They tell you to be careful of the types you collect...")
      time.sleep(2)
-     
-def who_are_you():
+     demon_souls.append("Soul of the iniquitous 1")
+     demon_souls.append("Soul of the iniquitous 2")
+     demon_souls.append("Soul of the iniquitous 3")
+     print("The figure gives them to you: 'Here is a parting gift from me: three akin demon souls. You may collect as many different types as you wish, but make sure you collect until 100, before seeing her majesty.")
+     time.sleep(1)
+     print("You currently possess:")
+     time.sleep(1)
+     print(demon_souls[0])
+     print(demon_souls[1])
+     print(demon_souls[2])
+
+def who_are_you(demon_souls):
     time.sleep(4)
     print("The mysterious figure speaks: 'I am merely a guardian, a gate-watcher of the realm beyond'")
     time.sleep(1)
@@ -102,6 +113,16 @@ def who_are_you():
               print("The mysterious figure speaks one last time before you go through the gates: 'Mortal, take these souls of the unworthy, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
               time.sleep(1)
               print("'...in the realm of eternal damnation... Hell.'")
+              demon_souls.append("Soul of the unworthy 1")
+              demon_souls.append("Soul of the unworthy 2")
+              demon_souls.append("Soul of the unworthy 3")
+              print("The figure gives them to you: 'Here is a parting gift from me: three akin demon souls. You may collect as many different types as you wish, but make sure you collect until 100, before seeing her majesty.")
+              time.sleep(1)
+              print("You currently possess:")
+              time.sleep(1)
+              print(demon_souls[0])
+              print(demon_souls[1])
+              print(demon_souls[2])
 
     if riddle == "hint":
          time.sleep(2)
@@ -115,10 +136,19 @@ def who_are_you():
               print("The mysterious figure speaks one last time before you go through the gates: 'Mortal, take these souls of the unworthy, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
               time.sleep(1)
               print("'...in the realm of eternal damnation... Hell.'")
+              demon_souls.append("Soul of the unworthy 1")
+              demon_souls.append("Soul of the unworthy 2")
+              demon_souls.append("Soul of the unworthy 3")
+              print("The figure gives them to you: 'Here is a parting gift from me: three akin demon souls. You may collect as many different types as you wish, but make sure you collect until 100, before seeing her majesty.")
+              time.sleep(1)
+              print("You currently possess:")
+              time.sleep(1)
+              print(demon_souls[0])
+              print(demon_souls[1])
+              print(demon_souls[2])
 
     
-
-def what_happened_to_me(figure_questions, asking_figure):
+def what_happened_to_me(figure_questions, asking_figure, demon_souls):
     time.sleep(4)
     print("The mysterious figure speaks: 'Dear mortal, even though you may not remember it now, you were a bringer of pain and suffering in your realm, with a cruel spirit and a wicked heart.'")
     time.sleep(1)
@@ -140,10 +170,20 @@ def what_happened_to_me(figure_questions, asking_figure):
     time.sleep(1)
     print("The voices in your head tell you that there are different types of demon souls. They tell you to be careful of the types you collect...")
     time.sleep(2)
+    demon_souls.append("Soul of the unforgiven 1")
+    demon_souls.append("Soul of the unforgiven 2")
+    demon_souls.append("Soul of the unforgiven 3")
+    print("The figure gives them to you: 'Here is a parting gift from me: three akin demon souls. You may collect as many different types as you wish, but make sure you collect until 100, before seeing her majesty.")
+    time.sleep(1)
+    print("You currently possess:")
+    time.sleep(1)
+    print(demon_souls[0])
+    print(demon_souls[1])
+    print(demon_souls[2])
 
-def what_lies_beyond_gate():
+def what_lies_beyond_gate(demon_souls):
      time.sleep(4)
-     print("The mysterious figure speaks: 'Dear mortal, this gate is what you have been comdemned to go through by her majesty, who was handed conmtrol over your sould as soon as you passed on from the mortal realm...'")
+     print("The mysterious figure speaks: 'Dear mortal, this gate is what you have been comdemned to go through by her majesty, who was handed conmtrol over your soul as soon as you passed on from the mortal realm...'")
      time.sleep(2)
      print("'Beyond this gate, lies the realm of eternal damnation. I am sure you know what this is...'")
      time.sleep(2)
@@ -151,9 +191,18 @@ def what_lies_beyond_gate():
      time.sleep(2)
      print("What lies beyonmd this gate, you know, is the realm of Hell.")
      time.sleep(2)
-     print("The mysterious figure speaks one last time before you go through the gates: 'Mortal, take these souls of the iniquitous, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
+     print("The mysterious figure speaks one last time before you go through the gates: 'Mortal, take these souls of the lawless, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
      time.sleep(2)
-
+     demon_souls.append("Soul of the lawless 1")
+     demon_souls.append("Soul of the lawless 2")
+     demon_souls.append("Soul of the lawless 3")
+     print("The figure gives them to you: 'Here is a parting gift from me: three akin demon souls. You may collect as many different types as you wish, but make sure you collect until 100, before seeing her majesty.")
+     time.sleep(1)
+     print("You currently possess:")
+     time.sleep(1)
+     print(demon_souls[0])
+     print(demon_souls[1])
+     print(demon_souls[2])
 
 
 

@@ -2,11 +2,11 @@ import time
 import sys
 
 def main():
-    figure_questions = ["'Where am I?'", "'Who are you?'", "'What happened to me?'", "'What lies beyond this gate?'"]
+    figure_questions = ["[Where am I?]", "[Who are you?]", "[What happened to me?]", "[What lies beyond this gate?]"]
     time.sleep(3)
     print("You awaken, not knowing where you are and having no memory of past events...")
     time.sleep(2)
-    print("You observe a barren landscape, the horizon touching an infinitely darkened land...")
+    print("You observe a barren landscape, the horizon touching an infinitely darkened land, overshadowed by grey clouds...")
     time.sleep(2)
     print("the faint glimmer of the rays of a mysterious light source is the only thing keeping you from not being able to see...")
     time.sleep(2)
@@ -70,7 +70,7 @@ def where_am_i():
      time.sleep(2)
      print("And you know it to be true. The feeling that you have had since you awakened has almost completely taken over... You are brought to your knees. You know there is no choice but onward...")
      time.sleep(2)
-     print("The gate-keeper speaks one last time before you go through the gates: 'Mortal, take these souls of the iniquitous, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
+     print("The mysterious figure speaks one last time before you go through the gates: 'Mortal, take these souls of the iniquitous, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
      time.sleep(2)
      print("Your objective is sealed. It is now your mission to collect 100 souls in the realm beyond. You feel the realm of eternal damnation before you. The cries of the souls of demons echo through your mind...")
      time.sleep(1)
@@ -82,7 +82,41 @@ def who_are_you():
     print("The mysterious figure speaks: 'I am merely a guardian, a gate-watcher of the realm beyond'")
     time.sleep(1)
     print("'Few who come here get past me, but all they will know beyond this point is suffering'")
-    time.sleep(3)
+    time.sleep(2)
+    print("'You have asked me the wrong question, mortal. You needn't know who I am. Now you must answer a riddle...'")
+    time.sleep(2)
+    print("The gate-keeper gives you his riddle: 'I can fly but have no wings. I can cry, but I have no eyes. Wherever I go, darkness follows me. What am I?'")
+    time.sleep(1)
+    print("[answer him]")
+    print("[hint]")
+    time.sleep(1)
+    riddle = input("Do you wish to answer? Or do you wish to spend your single opportunity at a hint?:\n")
+
+    if riddle == "answer him":
+         time.sleep(1)
+         answer_riddle = input("What is your answer to this riddle?:\n")
+         if answer_riddle in ["Cloud", "A cloud", "cloud", "a cloud"]:
+              time.sleep(2)
+              print("The figure speaks: 'Alas! Your answer is correct! Smarter than I thought...'")
+              time.sleep(2)
+              print("The mysterious figure speaks one last time before you go through the gates: 'Mortal, take these souls of the unworthy, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
+              time.sleep(1)
+              print("'...in the realm of eternal damnation... Hell.'")
+
+    if riddle == "hint":
+         time.sleep(2)
+         print("The figure speaks: 'You are slightly dissapointing... Oh well, your hint is: I am all around you, overhsadowing everything...'")
+         time.sleep(1)
+         answer_riddle = input("What is your answer to this riddle?:\n")
+         if answer_riddle in ["Cloud", "A cloud", "cloud", "a cloud"]:
+              time.sleep(2)
+              print("The figure speaks: 'Alas! Your answer is correct! Smarter than I thought...'")
+              time.sleep(2)
+              print("The mysterious figure speaks one last time before you go through the gates: 'Mortal, take these souls of the unworthy, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
+              time.sleep(1)
+              print("'...in the realm of eternal damnation... Hell.'")
+
+    
 
 def what_happened_to_me(figure_questions, asking_figure):
     time.sleep(4)
@@ -100,7 +134,7 @@ def what_happened_to_me(figure_questions, asking_figure):
     time.sleep(2)
     print("You know not what lies beyond these gates, but you suddenly feel compelled to continue...")
     time.sleep(2)
-    print("The gate-keeper speaks one last time before you go through the gates: 'Mortal, take these souls of the unforgiven, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
+    print("The mysterious figure speaks one last time before you go through the gates: 'Mortal, take these souls of the unforgiven, relics, before you proceed. Collect more thoughout your journey. They are the key to reedeming yourself. Just take 100 to her majesty...'")
     time.sleep(2)
     print("Your objective is sealed. It is now your mission to collect 100 souls in the realm beyond. You feel the realm of eternal damnation before you. The cries of the souls of demons echo through your mind...")
     time.sleep(1)

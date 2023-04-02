@@ -1,7 +1,7 @@
 import time
 import sys
 
-def main():
+def main_premise():
     figure_questions = ["[Where am I?]", "[Who are you?]", "[What happened to me?]", "[What lies beyond this gate?]"]
     demon_souls = []
     time.sleep(3)
@@ -20,6 +20,9 @@ def main():
     print("'Someone at the door, worthy of the gift of Death, but do they lack the courage to accept it?'")
     time.sleep(3)
     escape_choice = input("You are suddenly afraid, but do you choose to run?\n")
+    escape(figure_questions, demon_souls, escape_choice)
+
+def escape(figure_questions, demon_souls, escape_choice):
     if escape_choice[0] in ["Y","y"]:
         time.sleep(3)
         print("You ran as fast as your crumbling legs could take you. You did not choose to accept the gift that the mysterious figure spoke of...")
@@ -208,4 +211,4 @@ def what_lies_beyond_gate(demon_souls):
 
 
 if __name__ == "__main__":
-    main()
+    main_premise()

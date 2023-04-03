@@ -37,29 +37,27 @@ def escape(figure_questions, demon_souls, escape_choice):
         print("You tell the mysterious figure a name you suddenly remembered, in that moment, as your own: " +name+ " but it doesn't really feel like you remember...")
         print("It feels to you as though your mind is being played on by another force, something foreign, twisting your thoughts and making you belive things that you know, deep inside, are true about you.,.")
         time.sleep(2)
-        first_questions(figure_questions, name, demon_souls)
-        
-        
-def first_questions(figure_questions, name, demon_souls):
-    print("Questions:")
-    time.sleep(2)
-    for question in figure_questions:
+        print("You suddenly fel the urge to question this myserious figure, as you are still disoriented and confused of your whereabouts...")
+        time.sleep(2)
+        print("Questions:")
+        time.sleep(1)
+        for question in figure_questions:
             time.sleep(1)
             print(question)
-    time.sleep(2)
-    asking_figure = input("What question do you ask this mysterious figure, " +name+ "?:\n")
+        time.sleep(2)
+        asking_figure = input("What question do you ask this mysterious figure, " + name + "?:\n")
 
-    if asking_figure == "Where am I?":
-         where_am_i(demon_souls)
-    
-    if asking_figure == "Who are you?":
-         who_are_you(demon_souls)
-    
-    if asking_figure == "What happened to me?":
-        what_happened_to_me(figure_questions, asking_figure)
+        if asking_figure == "Where am I?":
+            where_am_i(demon_souls)
 
-    if asking_figure == "What lies beyond this gate?":
-        what_lies_beyond_gate(demon_souls)
+        if asking_figure == "Who are you?":
+            who_are_you(demon_souls)
+
+        if asking_figure == "What happened to me?":
+            what_happened_to_me(figure_questions, asking_figure)
+
+        if asking_figure == "What lies beyond this gate?":
+            what_lies_beyond_gate(demon_souls)
      
     
 def where_am_i(demon_souls):
